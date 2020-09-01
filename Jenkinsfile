@@ -1,10 +1,9 @@
 pipeline {
- agent none
+ agent any
 
  stages
  {
-  agent { label 'none' }
-  stage('Checkout')
+   stage('Checkout')
   {
    steps { 
     git branch: 'master', url: 'https://github.com/mudipallinarasimhulu/devops-java-maven-code.git'
