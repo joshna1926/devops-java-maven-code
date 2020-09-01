@@ -3,10 +3,12 @@ pipeline {
 
  stages
  {
-  agent { label 'deploy' }
+  agent { label 'none' }
   stage('Checkout')
   {
    steps { 
     git branch: 'master', url: 'https://github.com/mudipallinarasimhulu/devops-java-maven-code.git'
    }
   }
+ }
+}
