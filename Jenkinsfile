@@ -3,7 +3,6 @@ pipeline {
 
  stages
  {
-  agent { label 'none' }
   stage('Checkout')
   {
    steps { 
