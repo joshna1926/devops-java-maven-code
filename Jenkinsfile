@@ -7,11 +7,8 @@ pipeline{
         environment{
 	    Docker_tag = getDockerTag()
         }
-        
         stages{
-
-
-              stage{
+		stage('build'){
                    agent {
                 docker {
                 image 'maven'
