@@ -1,6 +1,6 @@
 # A Java/Maven/JUnit HelloWorld example
 
-A „Hell yyeyyeyeyeyey World!” sample written in Java using Maven for the build, that showcases a few very simple tests.
+A „Hello hhhhh World!” sample written in Java using Maven for the build, that showcases a few very simple tests.
 
 This example demonstrates:
 
