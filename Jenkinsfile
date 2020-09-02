@@ -7,6 +7,7 @@ pipeline{
         environment{
 	    Docker_tag = getDockerTag()
         }
+	
         
         stages{
                 stage('Quality Gate Statuc Check'){
@@ -17,6 +18,9 @@ pipeline{
                 args '-v $HOME/.m2:/root/.m2'
                 }
             }
+		}
+	}
+	
     stages {
         stage('Build') {
             steps {
@@ -25,4 +29,3 @@ pipeline{
         }
     }
 }
-	}
