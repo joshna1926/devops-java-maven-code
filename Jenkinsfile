@@ -9,9 +9,7 @@ pipeline{
         }
         
         stages{
-
-
-              stage('Quality Gate Statuc Check'){
+                stage('Quality Gate Statuc Check'){
 
                agent {
                 docker {
@@ -19,3 +17,11 @@ pipeline{
                 args '-v $HOME/.m2:/root/.m2'
                 }
             }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -B'
+            }
+        }
+    }
+}
