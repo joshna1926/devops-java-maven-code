@@ -9,13 +9,13 @@ pipeline{
         }
         stages{
 		stage('build'){
-                   agent any {
+                   agent any 
                 docker {
                 image 'maven'
                 args '-v $HOME/.m2:/root/.m2'
                 }
-            }
-                   steps{
+  
+                 steps{
                       script{
                         sh 'mvn -B -DskipTests clean package'
                        }
