@@ -4,12 +4,12 @@ def getDockerTag(){
 }
 pipeline {
     agent {
-        docker { image 'maven' }
+        docker { image 'node:14-alpine' }
     }
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'mvn clean package '
+                sh 'node --version'
             }
         }
     }
