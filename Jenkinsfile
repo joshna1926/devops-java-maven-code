@@ -8,7 +8,6 @@ pipeline{
 	    Docker_tag = getDockerTag()
         }
 	
-        
         stages{
                 stage('Quality Gate Statuc Check'){
 
@@ -19,13 +18,11 @@ pipeline{
                 }
             }
 		}
-	}
-	
-    stages {
-        stage('Build') {
+	 stage('Build') {
             steps {
                 sh 'mvn -B'
             }
         }
     }
 }
+
