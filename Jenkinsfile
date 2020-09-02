@@ -1,13 +1,4 @@
-pipeline {
- agent any
-
- stages
- {
-   stage('Checkout')
-  {
-   steps { 
-    git branch: 'master', url: 'https://github.com/mudipallinarasimhulu/devops-java-maven-code.git'
-   }
-  }
- }
-}
+def getDockerTag(){
+        def tag = sh script: 'git rev-parse HEAD', returnStdout: true
+        return tag
+        }
