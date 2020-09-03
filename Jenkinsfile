@@ -12,16 +12,17 @@
         stages{
 
 
-            stage('Build'){
+            stage ('Build'){
 
 		    agent { label 'docker' }
+		    steps{
                 docker {
 	       
               image 'maven'
 			 
                 args '-v $HOME/.m2:/root/.m2'
                 }
-            }
+         
              steps{
                       script{
                 
@@ -30,4 +31,5 @@
                 }  
               }
         }
+	}
   
