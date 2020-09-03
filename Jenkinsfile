@@ -16,7 +16,10 @@
 
                agent {
                 docker {
+	        dockerfile true
+                 label 'docker'
                 image 'maven'
+			 
                 args '-v $HOME/.m2:/root/.m2'
                 }
             }
