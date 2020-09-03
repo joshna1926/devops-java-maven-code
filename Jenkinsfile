@@ -1,11 +1,10 @@
 
 pipeline {
- agent none
+ agent any
 
  stages
  {
-  agent { label 'any' }
-  stage('Checkout')
+   stage('Checkout')
   {
    steps { 
     git branch: 'master', url: 'https://github.com/mudipallinarasimhulu/devops-java-maven-code.git'
@@ -14,7 +13,7 @@ pipeline {
 
   stage('Build War')
   {
-   agent { label 'any' }
+  
    steps { 
     sh "mvn clean package"
    }
