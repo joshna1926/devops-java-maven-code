@@ -13,8 +13,7 @@
 
 
             stage ('Build'){
-
-		    agent { label 'docker' }
+		    agent any 
 		    steps{
                 docker {
 	       
