@@ -1,9 +1,8 @@
 pipeline {
- agent none
+ agent any
 
  stages
  {
-  agent { label 'deploy' }
   stage('Checkout')
   {
    steps { 
